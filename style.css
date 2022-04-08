@@ -2,6 +2,10 @@
   font-family: RetGanon;
   src: url("font/RetGanon.ttf");
 }
+@font-face {
+  font-family: GreatVibes;
+  src: url("font/GreatVibes-Regular.ttf");
+}
 
 body {
   font-family: RetGanon;
@@ -151,8 +155,8 @@ h3 {
 }
 h4 {
   text-align: center;
-  font-family: GreatVibes-Regular;
-  font-size: 50px;
+  font: 50 100px/0.8 GreatVibes, Helvetica, sans-serif;
+  /*font: 50 100px/0.8 "Great Vibes", Helvetica, sans-serif;*/
   color: #fff;
   text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
 }
@@ -189,6 +193,7 @@ align-self: flex-end;
     padding-top: 30px;
     width: 85%;
  */
+}
 #block {
   display: flex;
   flex-direction: row;
