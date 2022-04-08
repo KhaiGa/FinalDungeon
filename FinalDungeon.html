@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Dungeon</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+
+</head>
+<body onload="width_cal()">
+
+<div id="parallax">
+    <div id="logo"></div>
+    
+    <h4>a worthy challenge for real gamers</h4>
+    <div id="wings"></div>
+    <div class="container">
+        
+        <div id="intro">
+        <h1>About this project</h1>
+            <br>
+            Final Dungeon is a free upcoming 2D Top Down Dungeon Crawler Game developed using Unity.<br>
+            The game is set in an underground world with a variety of dungeons to "crawl" your way through.
+            By means such as a steep grinding system, unforgiving deaths and seemingly never-ending dungeons with increasing difficulty it hopes to keep even the most 
+            experienced players on the edge of their seats. 
+
+            <br>
+            <br>
+        </div>
+        <video class="video" id="video-style" width="960" height="720" autoplay muted controls loop>
+            <source src="FDDungeons.mp4" type="video/mp4">
+          </video><script>
+            document.getElementById('vid').play();
+        </script>
+
+        <br>
+        <br>
+        <div class="box">
+            <h1>Gameplay</h1>
+            <h2>Light Attack</h2>
+            Deal minor damage in a narrow arc in direction of the cursor.
+            <br>
+            <br>
+            <div id="chargeVideoRow">
+                
+            <img height="15%" src="img/mouseiconLeft.png" width="15%" align: left>
+                <img class="gameplayIMG" alt="charge attack animation" height="75%" src="img/attackUp.gif" width="30%">
+            </div><BR>
+            <h2>Charge Attack</h2>
+            Jump backwards and enter a charging form. Upon releasing quickly dash forward and deal high damage in a wide arc in front of you.
+            <br>
+            <br>
+            <div id="chargeVideoRow">
+                
+            <img height="15%" src="img/mouseiconCharge.png" width="15%" align: left>
+                <img class="gameplayIMG" alt="charge attack animation" height="75%" src="img/charge_attack.gif" width="30%">
+                <img class="gameplayIMG" alt="charge attack animation" height="75%" src="img/charge_stun.gif" width="30%">
+            </div>
+                <p>
+                    <h3 style="margin-top: -30px; font-style: normal; font-size: 40px;">Three Charging States</h3><br>
+                    <p style="text-align: left; margin-left: 50px; margin-top: 10px">
+                    Lesser Charge: Deal increased damage <br>
+                    High Charge: Deal higher damage and briefly stun enemies<br>
+                    Highest Charge: Deal maximum damage and stun enemies for a longer period of time<br><br>
+                    Releasing during the Perfect Attack Window (dark red indicator following each state) will enhance damage and stun duration</p>
+                </p>
+               
+            <br>
+            <h2>Shield Block</h2>
+            Block incoming attacks from the front. Blocking with the right timing will result in a Perfect Block.
+            <br>
+            <br>
+            <div id="chargeVideoRow">
+                
+            <img height="15%" src="img/mouseiconBlock.png" width="15%" align: left>
+                <img class="gameplayIMG" alt="charge attack animation" height="75%" src="img/perfect_block.gif" width="30%">
+                <img class="gameplayIMG" alt="charge attack animation" height="75%" src="img/projectile.gif" width="30%">
+            </div> <br>
+                    Perfect Block(Melee): Briefly stun enemies and knock them back<br>
+                    Perfect Block(Projectile): Reflect the projectile <br><br><br>
+        </div>
+        <br> <br> <br>
+        <div class="box" style="margin-top: 20px">
+                     <h1> Enemies </h1> </div>
+                     <h3> Slimes</h3>
+                     <div style="display: flex; justify-content: center; flex-direction: row;" >
+                            <p><img src="img/slimeFrontColors.gif" width="330px" height="110px">
+                        </div><div class="box"><p></p>
+                            The simplest of enemies, coming in various colors and sizes.<br> Despite their appearance, in numbers they can pose a threat not to be taken lightly 
+                        </p></div>
+                    <h3>Wizard</h3>
+                    <div style="text-align: center;">
+                        
+                        <img src="img/wizardChargeLeft.gif" alt="image of wizard" height=auto width="8%"><br>
+                        <div class="box">
+                            <p>
+                            Wizards are ancient protectors of dungeons and the secrets within. They wear long violet robes and carry a magic
+                            staff with which they cast devastating magical attacks on their enemies.</p>
+                    </div></div>
+                    <h3>Shadow</h3>
+                
+                <div> <img src="img/SPchargeAtkDownGif.gif" alt="shadow" width="10%" height=auto ></div>
+                    <div class ="box">
+                        <p>
+                            Shadow creatures copy not only the appearance but also techniques and strengths of their enemy. According to rumors
+                            they were created by mages of old to guard kingdoms long fallen.
+                        </p>
+                    </div>
+                    <h3>Boss</h2><br>
+                    -Coming Soon-
+                    <br><br>
+                    <br> <br> <br>
+            <div class="box" style="margin-top: 100px">
+                <h1>Items</h1>
+                <h2>Gear</h2>(so far)
+                <div class="gear"><br>
+                    <img src="img/BronzePlate.png" alt="Bronze Plate" height="64" width="64"><br>
+                  
+                        A simple but reliable chestplate to keep its wearer safe from lighter attacks. Lightly increases HP
+                        and lightly decreases MS.
+                 
+                </div><br>
+                <div class="gear">
+                    <img src="img/IronPlate.png" alt="Iron Plate" height="64" width="64"><br>
+                    
+                        A heavy chestplate with high endurance. Restricts movement due to its weight. Increases HP, decreases
+                        MS and lightly decreases AS.
+                    
+
+                </div><br>
+                <div class="gear">
+                    <img src="img/GoldenPlate.png" alt="Golden Plate" height="64" width="64"><br>
+                     A shiny, golden armor that can endure nearly any attack. Highly increases HP, decreases MS.
+                  
+    
+                </div><br>
+                <div class="gear">
+                    <img src="img/Sword.png" alt="Sword" height="64" width="64"><br>
+               
+                        Made of molten Gems of Hope, this ancient sword greatly increases Attack but decreases HP. Highly
+                        increases DMG, decreases HP and lightly increases AS.
+                    
+                </div><br><br>
+            <h2>Gems</h2>
+            <table style="width: 100%">
+                <col width="10%">
+                <col width="10%">
+                <col width="80%">
+                <tr style="border-bottom: 1px solid black">
+                    <th colspan="3">
+                        <h3>Gem of Despair</h3>
+                    </th>
+                </tr>
+                <tr class="gem_info">
+                    <th>
+                        <img class="gem_img" height="42" src="img/gemViolet.png" width="24">
+                    </th>
+                    <th style="padding-right: 20px">
+                        +MS, -DMG
+                    </th>
+                    <th style="text-align: left; padding-left: 20px">
+                        <p>
+                            Increases Movement Speed, but decreases Attack Damage
+                        </p>
+
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="3">
+                        <h3>Gem of Fury</h3>
+                    </th>
+                </tr>
+                <tr class="gem_info">
+                    <th>
+                        <img class="gem_img" height="42" src="img/gemRed.png" width="24">
+                    </th>
+                    <th style="padding-right: 20px">
+                        +DMG,
+                        -HP
+                    </th>
+                    <th style="text-align: left; padding-left: 20px">
+                        <p>
+                            Increases Attack Damage, but decreases Health
+                        </p>
+
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="3">
+                        <h3>Gem of Hate</h3>
+                    </th>
+                </tr>
+                <tr class="gem_info">
+                    <th>
+                        <img class="gem_img" height="42" src="img/gemGreen.png" width="24">
+                    </th>
+                    <th style="padding-right: 20px">
+                        +AS,
+                        -HP
+                    </th>
+                    <th style="text-align: left; padding-left: 20px">
+                        <p>
+                            Increases Attack Speed, but decreases Health
+                        </p>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="3">
+                        <h3>Gem of Hope</h3>
+                    </th>
+                </tr>
+                <tr class="gem_info">
+                    <th>
+                        <img class="gem_img" height="42" src="img/gemBlue.png" width="24">
+                    </th>
+                    <th style="padding-right: 20px">
+                        +HP,
+                        -MS
+                    </th>
+                    <th style="text-align: left; padding-left: 20px">
+                        <p>
+                            Increases Health, but decreases Movement Speed
+                        </p>
+
+                    </th>
+                </tr>
+            </table>
+            <br><br>
+            </div>
+            <br><br><br>
+           <div class="box"> <br>
+            <h1>Enhancement</h1>
+            <div>
+                <img class="gem_img" height=auto src="img/Inventory.png" width="50%"><br><br>
+                    <div style="margin-left: 150px;margin-right: 150px;">Enemies can drop Gems of  Level 1. Each Gem has both a positive and a negative effect. Combining Gems of the same Level 
+                    creates a Gem of the next higher Level that has a stronger positive and a weaker negative effect. The maximum Level is 3.  
+                    The Player can only equip 3 Gems at the same time.
+                </div>
+
+            </div><br><br>
+            </div><br><br>
+            <div class="box">
+                <h1>Other Features</h1>
+                    <h3>Some walls may not be as solid as they appear...</h3><br><br><br><br>
+                    <video class="video" id="video-style" width="50%" height="50%" autoplay muted controls loop>
+                        <source src="secretpaths.mp4" type="video/mp4">
+                      </video><script>
+                        document.getElementById('vid').play();
+                    </script>
+                    <br>
+                    <h2>Others coming soon!</h2><br><br><br>
+                </div></div>
+               
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+    var w = document.body.clientWidth;
+    window.console.log(w);
+
+    function width_cal() {
+        document.getElementById("wings").style.borderLeftWidth = w / 2 + "px";
+        document.getElementById("wings").style.borderRightWidth = w / 2 + "px";
+    }
+</script>
+</body>
+</html>
